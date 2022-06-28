@@ -1,0 +1,97 @@
+@import "color.scss";
+
+section {
+    &#todo {
+        .todo-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background: $beyaz;
+            border-radius: 5px;
+            margin: 10px auto;
+            padding: 20px;
+            &.active {
+                .item-text {
+                    .text-head,
+                    .text-description {
+                        text-decoration: line-through !important;
+                        color: $kirmizi !important;
+                    }
+                }
+                opacity: 0.5;
+            }
+            &.delete {
+                display: none;
+            }
+            .item-checkbox {
+                position: relative;
+                .checkbox {
+                    visibility: hidden;
+                    &:checked {
+                        & ~ .checkbox-label {
+                            background: $yesil;
+                            border-color: $yesil;
+                            border-style: solid;
+                        }
+                    }
+                }
+                .checkbox-label {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px dotted $siyah;
+                    border-radius: 5px;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(50%, -50%);
+                }
+            }
+            .item-text {
+                width: 100%;
+                margin: auto 40px;
+                .text-head {
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                }
+                .text-description {
+                    font-size: 0.875rem;
+                    font-weight: 300;
+                }
+            }
+            .item-delete {
+                i {
+                    cursor: pointer;
+                    color: $kirmizi;
+                }
+            }
+        }
+    }
+    &#form {
+        .todo-form {
+            background: $beyaz;
+            border-radius: 5px;
+            margin: 10px auto;
+            padding: 20px;
+            input {
+                display: block;
+                width: 100%;
+                margin: 10px auto;
+                padding: 10px;
+                border-bottom: 1px solid $siyah;
+                border-radius: 0;
+            }
+            input[type=submit] {
+                border: 0;
+                max-width: 200px;
+                margin: 10px 0px 10px auto !important;
+                background: $mavi;
+                color: #fff;
+                cursor: pointer;
+                transition: all ease .2s;
+                &:hover {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

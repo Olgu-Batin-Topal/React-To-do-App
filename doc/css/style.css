@@ -1,0 +1,83 @@
+section#todo .todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fffefd;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 20px;
+}
+section#todo .todo-item.active {
+  opacity: 0.5;
+}
+section#todo .todo-item.active .item-text .text-head,
+section#todo .todo-item.active .item-text .text-description {
+  text-decoration: line-through !important;
+  color: #c23616 !important;
+}
+section#todo .todo-item.delete {
+  display: none;
+}
+section#todo .todo-item .item-checkbox {
+  position: relative;
+}
+section#todo .todo-item .item-checkbox .checkbox {
+  visibility: hidden;
+}
+section#todo .todo-item .item-checkbox .checkbox:checked ~ .checkbox-label {
+  background: #4cd137;
+  border-color: #4cd137;
+  border-style: solid;
+}
+section#todo .todo-item .item-checkbox .checkbox-label {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px dotted #121212;
+  border-radius: 5px;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+}
+section#todo .todo-item .item-text {
+  width: 100%;
+  margin: auto 40px;
+}
+section#todo .todo-item .item-text .text-head {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+section#todo .todo-item .item-text .text-description {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+section#todo .todo-item .item-delete i {
+  cursor: pointer;
+  color: #c23616;
+}
+section#form .todo-form {
+  background: #fffefd;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 20px;
+}
+section#form .todo-form input {
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  border-bottom: 1px solid #121212;
+  border-radius: 0;
+}
+section#form .todo-form input[type=submit] {
+  border: 0;
+  max-width: 200px;
+  margin: 10px 0px 10px auto !important;
+  background: #00a8ff;
+  color: #fff;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+section#form .todo-form input[type=submit]:hover {
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */
